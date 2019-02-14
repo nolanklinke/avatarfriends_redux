@@ -4,44 +4,36 @@ import Cardlist from "./components/Cardlist";
 import ErrorBoundary from "./components/ErrorBoundary";
 import SearchBox from "./components/SearchBox";
 import Scroll from "./components/Scroll";
-import { setSearchField } from "./actions";
+import { setSearchField, requestAvatars } from "./actions";
 import "./App.css";
 
 const mapStateToProps = state => {
   return {
-    searchField: state.searchField
+    searchField: state.searchAvatars.searchField,
+    avatars: state.requestAvatars.avatars,
+    isPending: state.requestAvatars.isPending,
+    error: state.requestAvatars.error
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    onSearchChange: event => dispatch(setSearchField(event.target.value))
+    onSearchChange: event => dispatch(setSearchField(event.target.value)),
+    onRequestAvatars: () => dispatch(requestAvatars())
   };
 };
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      robots: []
-    };
-  }
-
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then(response => response.json())
-      .then(users => {
-        this.setState({ robots: users });
-      });
+    this.props.onRequestAvatars();
   }
 
   render() {
-    const { robots } = this.state;
-    const { searchField, onSearchChange } = this.props;
-    const filteredRobots = robots.filter(robot => {
-      return robot.name.toLowerCase().includes(searchField.toLowerCase());
+    const { searchField, onSearchChange, avatars, isPending } = this.props;
+    const filteredAvatars = avatars.filter(avatar => {
+      return avatar.name.toLowerCase().includes(searchField.toLowerCase());
     });
-    return !robots.length ? (
+    return isPending ? (
       <h1 className="tc">Loading</h1>
     ) : (
       <div className="tc">
@@ -49,7 +41,7 @@ class App extends React.Component {
         <SearchBox searchChange={onSearchChange} />
         <Scroll>
           <ErrorBoundary>
-            <Cardlist robots={filteredRobots} />
+            <Cardlist avatars={filteredAvatars} />
           </ErrorBoundary>
         </Scroll>
       </div>
