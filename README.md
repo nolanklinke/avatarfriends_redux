@@ -1,5 +1,7 @@
 # AvatarFriends (with Redux)
 
+[Live](https://nolanklinke.github.io/avatarfriends_redux/)
+
 AvatarFriends is a simple application that utilizes Redux to manage state. As the user types within the search field, the avatars are simultaneously filtered to display what is being searched. Avatars are initially generated through two API calls:
 
 1. [Adorable Avatars](http://avatars.adorable.io/) to get the images.
