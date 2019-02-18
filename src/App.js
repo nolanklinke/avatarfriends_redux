@@ -37,7 +37,7 @@ class App extends React.Component {
       <h1 className="tc">Loading</h1>
     ) : (
       <div className="tc">
-        <h1 className="f1">Avatar Search</h1>
+        <h1 className="f1">Avatar Friends</h1>
         <SearchBox searchChange={onSearchChange} />
         <Scroll>
           <ErrorBoundary>
