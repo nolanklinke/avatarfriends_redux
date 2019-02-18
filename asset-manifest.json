@@ -1,7 +1,7 @@
 {
   "main.css": "/avatarfriends_redux/static/css/main.d27b5ec0.chunk.css",
-  "main.js": "/avatarfriends_redux/static/js/main.07f66ead.chunk.js",
-  "main.js.map": "/avatarfriends_redux/static/js/main.07f66ead.chunk.js.map",
+  "main.js": "/avatarfriends_redux/static/js/main.8e7d10a5.chunk.js",
+  "main.js.map": "/avatarfriends_redux/static/js/main.8e7d10a5.chunk.js.map",
   "static/css/1.c4aadd37.chunk.css": "/avatarfriends_redux/static/css/1.c4aadd37.chunk.css",
   "static/js/1.981cb22c.chunk.js": "/avatarfriends_redux/static/js/1.981cb22c.chunk.js",
   "static/js/1.981cb22c.chunk.js.map": "/avatarfriends_redux/static/js/1.981cb22c.chunk.js.map",
@@ -11,6 +11,6 @@
   "static/media/App.css": "/avatarfriends_redux/static/media/SEGA.12a3db8b.woff",
   "static/css/main.d27b5ec0.chunk.css.map": "/avatarfriends_redux/static/css/main.d27b5ec0.chunk.css.map",
   "index.html": "/avatarfriends_redux/index.html",
-  "precache-manifest.89a13c164738f49d90ddef6ff9489fd5.js": "/avatarfriends_redux/precache-manifest.89a13c164738f49d90ddef6ff9489fd5.js",
+  "precache-manifest.ec068fdcb612403d8ffeabdd4211d790.js": "/avatarfriends_redux/precache-manifest.ec068fdcb612403d8ffeabdd4211d790.js",
   "service-worker.js": "/avatarfriends_redux/service-worker.js"
 }

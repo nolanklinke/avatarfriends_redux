@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/avatarfriends_redux/precache-manifest.89a13c164738f49d90ddef6ff9489fd5.js"
+  "/avatarfriends_redux/precache-manifest.ec068fdcb612403d8ffeabdd4211d790.js"
 );
 
 workbox.clientsClaim();
